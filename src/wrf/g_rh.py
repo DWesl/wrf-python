@@ -7,6 +7,7 @@ from .metadecorators import copy_and_set_metadata
 
 
 @copy_and_set_metadata(copy_varname="T", name="rh",
+                       standard_name="relative_humidity",
                        description="relative humidity",
                        units="%")
 def get_rh(wrfin, timeidx=0, method="cat", squeeze=True, cache=None,
@@ -83,6 +84,8 @@ def get_rh(wrfin, timeidx=0, method="cat", squeeze=True, cache=None,
 
 
 @copy_and_set_metadata(copy_varname="T2", name="rh2",
+                       standard_name="relative_humidity",
+                       long_name="surface_relative_humidity",
                        description="2m relative humidity",
                        units="%")
 def get_rh_2m(wrfin, timeidx=0, method="cat", squeeze=True, cache=None,

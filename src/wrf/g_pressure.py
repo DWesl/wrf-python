@@ -6,6 +6,7 @@ from .util import extract_vars, either
 
 
 @copy_and_set_metadata(copy_varname=either("P", "PRES"), name="pressure",
+                       standard_name="air_pressure",
                        description="pressure")
 @convert_units("pressure", "pa")
 def get_pressure(wrfin, timeidx=0, method="cat", squeeze=True,

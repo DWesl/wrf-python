@@ -8,6 +8,7 @@ from .util import extract_vars
 
 
 @copy_and_set_metadata(copy_varname="T", name="theta",
+                       standard_name="air_potential_temperature",
                        description="potential temperature")
 @convert_units("temp", "k")
 def get_theta(wrfin, timeidx=0, method="cat", squeeze=True,
@@ -80,6 +81,7 @@ def get_theta(wrfin, timeidx=0, method="cat", squeeze=True,
 
 
 @copy_and_set_metadata(copy_varname="T", name="temp",
+                       standard_name="air_temperature",
                        description="temperature")
 @convert_units("temp", "k")
 def get_temp(wrfin, timeidx=0, method="cat", squeeze=True,
@@ -157,6 +159,7 @@ def get_temp(wrfin, timeidx=0, method="cat", squeeze=True,
 
 
 @copy_and_set_metadata(copy_varname="T", name="theta_e",
+                       standard_name="equivalent_potential_temperature",
                        description="equivalent potential temperature")
 @convert_units("temp", "K")
 def get_eth(wrfin, timeidx=0, method="cat", squeeze=True,
@@ -237,6 +240,7 @@ def get_eth(wrfin, timeidx=0, method="cat", squeeze=True,
 
 
 @copy_and_set_metadata(copy_varname="T", name="tv",
+                       standard_name="virtual_temperature",
                        description="virtual temperature")
 @convert_units("temp", "k")
 def get_tv(wrfin, timeidx=0, method="cat", squeeze=True,
@@ -318,6 +322,7 @@ def get_tv(wrfin, timeidx=0, method="cat", squeeze=True,
 
 
 @copy_and_set_metadata(copy_varname="T", name="twb",
+                       standard_name="wet_bulb_temperature",
                        description="wetbulb temperature")
 @convert_units("temp", "k")
 def get_tw(wrfin, timeidx=0, method="cat", squeeze=True,

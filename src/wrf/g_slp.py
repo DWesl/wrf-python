@@ -10,6 +10,7 @@ from .util import extract_vars
 
 @copy_and_set_metadata(copy_varname="T", name="slp",
                        remove_dims=("bottom_top",),
+                       standard_name="air_pressure_at_mean_sea_level",
                        description="sea level pressure",
                        MemoryOrder="XY")
 @convert_units("pressure", "hpa")
